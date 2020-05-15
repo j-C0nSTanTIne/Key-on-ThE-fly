@@ -67,6 +67,11 @@ Inoltre è in via di realizzazione la versione grafica utilizzando *tkinter*.
 Sinceramente mi secca studiare le varie licenze disponibili.  
 In generale, se qualcuno è interessato può liberamente esportare, modificare ed usare il codice per qualsiasi fine, con l'unico limite di citarne la paternità.
 
+### Esclusione di responsabilità
+
+Questo è un codice amatoriale non commercializzato che chiunque può visionare, modificare ed usare a suo rischio e pericolo.  
+Non viene data alcuna garanzia sul suo funzionamento, essendo possibili errori ancora non scoperti o disfunzioni di varia natura.
+
 ### Autore
 
 *Dario Brocato*
