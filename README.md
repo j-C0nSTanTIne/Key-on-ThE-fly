@@ -30,7 +30,7 @@ Il codice è ricompreso in due file *.py*, «**Key on ThE fly.py**» (il quale g
 Scaricandoli nella medesima directory ed avendo python 3.x installato sul pc, si può eseguire il software con:  
 `python "Key on ThE fly.py"`  
 
-Altrimenti, viene fornito anche l'eseguibile già creato utilizzando *pyinstaller*, «**Key on ThE fly.exe**», che basta scaricare ed eseguire.
+Altrimenti, per windows viene fornito anche l'eseguibile già creato utilizzando *pyinstaller*, «**Key on ThE fly.exe**», che basta scaricare ed eseguire.
 
 ## Prerequisiti
 
