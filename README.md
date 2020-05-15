@@ -1,4 +1,4 @@
-# Key-on-ThE-fly
+# Key on ThE fly
 Software in python per generare in modo sicuro password complesse in base alle risposte fornite a determinate domande, senza che le risposte e le password generate vengano salvate. 
 
 # Descrizione
