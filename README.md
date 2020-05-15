@@ -45,7 +45,7 @@ Per quanto riguarda invece l'utilizzo generale del programma:
 * Per "istanza" si intende la situazione in cui occorre la password, ad esempio "gmail", "hotmail", "sito aziendale" etc...
 * Prima occorre creare una o più istanze (il database dell'applicazione verrà creato al primo utilizzo)
     * Nella creazione dell'istanza dovrà darsi un nome significativo all'istanza (ad esempio "hotmail") e si potrà inserire una breve descrizione della stessa
-    * Si dovrà selezionare la lunghezza della password desiderata fra quelle indicate, minimo 8 - massimo 128. Si consiglia si sceglierla il più lunga possibile
+    * Si dovrà selezionare la lunghezza della password desiderata fra quelle indicate, minimo 8 - massimo 128. Si consiglia di sceglierla il più lunga possibile
     * Si potranno indicare eventuali caratteri speciali - fra quelli indicati - da non utilizzare nella password, perchè ad esempio vietati dallo specifico sito per il quale occorre la password
     * Quindi andranno fornite le domande e le risposte. Il numero minimo e necessario di domande è due, la terza è opzionale, anche se si consiglia di implementarla
     * Nel fornire le risposte non ha importanza il carattere maiuscolo, perchè poi dal programma verranno sempre convertite tutte in minuscolo
