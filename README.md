@@ -38,7 +38,7 @@ Le librerie generali utilizzate dal codice sono *sys, random, sqlite3, os.path, 
 
 ## Utilizzo
 
-Per vedere quali operazioni "tecniche" esegue il codice, vedere il diverso file di testo «*descrizione_codice.md*» nel quale sono spiegate le varie fasi compiute.  
+Per vedere quali operazioni "tecniche" esegue il codice, si rimanda al diverso file «*descrizione_codice.md*» nel quale sono spiegate più tecnicamente le diverse fasi.  
 
 Per quanto riguarda invece l'utilizzo generale del programma:
 * Tre sono le possibili operazioni: creare una istanza, selezionare una istanza, eliminare una istanza
