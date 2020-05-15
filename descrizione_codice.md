@@ -3,14 +3,14 @@
 * Il codice python fa inserire all'utente un minimo di due domande, un massimo di tre, con le relative risposte (convertite in minuscolo). Solamente le domande verranno poi salvate nel database sqlite3;
 * Per ciascuna risposta il codice trova l'hash SHA512, creando una stringa alfanumerica di 128 caratteri. Le lettere [A B C D E F] di ciascun hash vengono convertite nei numeri [ 10 11 12 13 14 15], in modo da avere una stringa solamente numerica;
 * I numeri dell'hash della prima risposta vengono convertiti in lettere minuscole e numeri [a-z0-9] grazie ad un dizionario {1 : "a", 2 : "b"...};
-* I numeri dell'hash della seconda risposta vengono converti sia in caratteri speciali [ ! $ % ( ) = ?" , _ - ] sia in lettere maiuscole [A-Z];
+* I numeri dell'hash della seconda risposta vengono convertiti sia in caratteri speciali [ ! $ % ( ) = ?" , _ - ] sia in lettere maiuscole [A-Z];
     * Se l'utente ha dichiarato che nella generazione della password devono essere esclusi alcuni carattei speciali, questi vengono esclusi dal dizionario in modo da non essere utilizzati;
 * Se la terza risposta (opzionale) è stata fornita, anche i numeri del suo hash vengono convertiti in lettere minuscole e numeri [a-z0-9] come per la prima risposta;
-* A questo punto, se sono state fornite tre risposte, avremo dunque due stringhe di caratteri alfanumerici, una di caratteri speciali ed una di caratteri maiuscoli;
+* A questo punto, se sono state fornite tre risposte, avremo dunque quattro stringhe: due stringhe di caratteri alfanumerici, una di caratteri speciali ed una di caratteri maiuscoli;
 * L'Utente ha indicato la lunghezza desiderata della password (8 - 16 - 20 - 32 - 64 - 128). Questa lunghezza viene utilizzata per determinare quanti caratteri dovranno essere selezionati dalle stringhe in precedenza ottenute.  
 Se ho due risposte, metà della password sarà composta dai caratteri alfanumerici generati dalla prima risposta, e poi 1/4 dai caratteri speciali generati dalla seconda risposta ed 1/4 dai caratteri maiuscoli sempre generati dalla seconda risposta.  
-Se ho tre risposte, 1/4 della password sarà composta dai caratteri alfanumerici generati dalla prima risposta, 1/4 dai caratteri speciali generati dalla seconda risposta, 1/4 dai caratteri maiuscoli sempre generati dalla seconda risposta, ed infine 1/4 dai caratteri minuscoli generati dalla terza risposta;     
-* Da ciascuna stringa vengono quindi selezionati, tramite un ciclo for, i primi N caratteri (N è dato dalle lunghezze stabilite prima) e salvati in una lista. La lista sarà quindi composta di caratteri minuscoli, maiuscoli, numeri e caratteri speciali;
+Se ho tre risposte, 1/4 della password sarà composta dai caratteri alfanumerici generati dalla prima risposta, 1/4 dai caratteri speciali generati dalla seconda risposta, 1/4 dai caratteri maiuscoli sempre generati dalla seconda risposta, ed infine 1/4 dai caratteri alfanumerici generati dalla terza risposta;     
+* Da ciascuna stringa vengono quindi selezionati, tramite un ciclo *for*, i primi **N** caratteri (N è dato dalle lunghezze stabilite prima) e salvati in una lista. La lista sarà quindi composta di caratteri minuscoli, maiuscoli, numeri e caratteri speciali;
 ESEMPIO:
     - lunghezza password = 8
     - due risposte fornite
@@ -21,11 +21,10 @@ ESEMPIO:
 * Per l'assemblaggio della password, viene determinata la lunghezza complessiva delle risposte fornite, data dalla somma della lunghezza delle due/tre risposte inserite (ad esempio le risposte "tre", "mia madre" e "42" avranno lunghezza complessiva di 13).  
 Il numero ottenuto viene utilizzato per la funzione `random.seed()`, in modo che se le risposte saranno sempre le stesse, il seed sarà sempre lo stesso;
 * La funzione `random.shuffle()` viene usata sugli elementi della lista, mescolandone quindi l'ordine. Come si è detto, se le risposte saranno sempre le stesse, il seed sarà sempre lo stesso e dunque il risultato dello "shuffle" sarà sempre lo stesso;
-* Gli elementi della lista vengono concatenati con `.join()` e creano la password finale;
+* Gli elementi della lista vengono concatenati con `.join()` creando la password finale;
 * L'Utente salva le domande create nel database sqlite3, dando un titolo all'istanza (ad esempio "password google") ed una descrizione opzionale;
 * Quando l'utente ha bisogno della password, il codice enumera il database e restituisce all'utente le istanze disponibili;
 * Quando l'utente seleziona una istanza, il codice gli restituisce le relative domande ed in base alle risposte fornite riesegue il codice sopra descritto. Se le risposte saranno le stesse, la password finale sarà la stessa, altrimenti sarà diversa;
-* L'utente può anche rimuovere singole istanze dal database;
 * Il database viene creato al primo utilizzo del codice, qualora il programma non lo trovi nell'attuale directory.
 
 ## ESEMPIO PRATICO
