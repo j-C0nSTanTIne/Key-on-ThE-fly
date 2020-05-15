@@ -69,7 +69,7 @@ In generale, se qualcuno è interessato può liberamente esportare, modificare e
 
 ### Esclusione di responsabilità
 
-Questo è un codice amatoriale non commercializzato che chiunque può visionare, modificare ed usare a suo rischio e pericolo.  
+Questo è un codice amatoriale non commercializzato, ancora in fase di miglioramento e testing, che chiunque può visionare, modificare ed usare a suo rischio e pericolo.  
 Non viene data alcuna garanzia sul suo funzionamento, essendo possibili errori ancora non scoperti o disfunzioni di varia natura.
 
 ### Autore
