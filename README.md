@@ -1,5 +1,5 @@
 # Key on ThE fly
-Software in python per generare in modo sicuro password complesse in base alle risposte fornite a determinate domande, senza che le risposte e le password generate vengano salvate. 
+Software in python per generare in modo sicuro password complesse in base alle risposte fornite dall'Utente a determinate domande da lui stesso create e di cui solamente lui conosce le relative risposte. Le risposte e le password generate non vengono salvate e dunque non possono essere rubate. 
 
 # Descrizione
 
@@ -17,7 +17,8 @@ Il software si limita a fare delle domande all'Utente, ed in base alle risposte 
 Con tale software l'Utente crea due/tre domande da fare, e solamente queste domande vengono salvate nel database dell'applicazione.
 L'applicazione, poi, estrarrà le domande dal database, le sottoporrà all'Utente, ed in base alle risposte fornite genererà una password complessa.  
 
-La forza di questo programma dipende dunque esclusivamente dalla capacità dell'Utente di creare domande per le quali lui e lui soltanto può conoscere le risposte, le quali dovranno essere sempre identiche per generare la stessa password.
+La forza di questo programma dipende dunque esclusivamente dalla capacità dell'Utente di creare domande per le quali lui e lui soltanto può conoscere le risposte, le quali dovranno essere sempre identiche per generare la stessa password.  
+In sostanza l'assunto è: è molto più facile ricordare le risposte a domande su argomenti che solo noi conosciamo e che difficilmente dimenticheremo, piuttosto che una password complessa.  
 La bontà di questo meccanismo è evidente: ognuno di noi sa qualcosa che nessun'altro sa, che non abbiamo mai pubblicizzato sui social network, che non abbiamo mai rivelato ad anima viva. Oppure riferimenti, citazioni, gusti, eventi del passato, sogni etc... che solamente noi possiamo dedurre/sapere/ricavare in base alle domande presentate.  
 Ad esempio: se come domanda imposto *«la mia squadra di calcio preferita»* e la mia pagina facebook è piena di riferimenti alla juventus (che è poi la risposta da me impostata), ovviamente il meccanismo diventa debolissimo.
 Già il meccanismo migliorerebbe se impostassi la domanda *«la mia squadra di calcio preferita»* e la risposta *«nessuna»*, creando quindi una risposta inaspettata.
